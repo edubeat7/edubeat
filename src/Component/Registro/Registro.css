@@ -1,0 +1,262 @@
+/* Base layout */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  width: 100%;
+}
+
+/* Signup container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #f5f5f500;
+}
+
+.signup-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  transition: all 0.3s ease;
+}
+
+/* Logo styling */
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-logo {
+  width: 100px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* Card content */
+.signup-card {
+  text-align: center;
+}
+
+.signup-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.signup-disclaimer {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Form fields */
+.form-fields {
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.signup-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Status messages */
+.signup-error {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-success {
+  color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Button styling */
+.button-container {
+  margin-bottom: 1.5rem;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.signup-button:hover {
+  background-color: #0069d9;
+}
+
+.signup-button:active {
+  transform: scale(0.98);
+}
+
+.signup-button.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.signup-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Login link */
+.login-link {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .signup-form {
+    max-width: 500px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+  }
+  
+  .signup-form {
+    padding: 1.75rem;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .signup-title {
+    font-size: 1.5rem;
+  }
+  
+  .app-logo {
+    width: 85px;
+  }
+  
+  .signup-input {
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .signup-form {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .signup-disclaimer {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .app-logo {
+    width: 70px;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .signup-input {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+  
+  .signup-button {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+  
+  .login-link {
+    font-size: 0.85rem;
+  }
+  
+  .signup-error, 
+  .signup-success {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+}

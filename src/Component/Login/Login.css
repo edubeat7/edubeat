@@ -1,0 +1,286 @@
+/* Estilos base y contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos generales del login */
+.login-container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.App-logo {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Animation for logo */
+@keyframes logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.App-logo {
+  animation: logo-float 3s ease-in-out infinite;
+}
+
+.login-card {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.login-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.login-disclaimer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #fff;
+  width: 100%;
+}
+
+.input-label span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para el botón */
+.login-button, .upload-button {
+  width: 100%;
+  max-width: 250px;
+  padding: 15px;
+  font-size: 1.1rem;
+  margin: 1.5rem auto;
+  background: linear-gradient(45deg, #6b46c1, #805ad5);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.login-button:hover, .upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para el botón */
+.upload-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: buttonShine 3s infinite;
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+/* Aseguramos que el app-container tenga los estilos del container original */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes buttonShine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+.login-error {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.login-success {
+  color: #00C851;
+  background: rgba(0, 200, 81, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Estilos para links */
+.login-disclaimer a {
+  color: #805ad5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-disclaimer a:hover {
+  color: #6b46c1;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .login-card {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    padding: 1.5rem 1rem;
+    max-width: 450px;
+  }
+  
+  .login-card {
+    padding: 1.5rem;
+  }
+  
+  .login-title {
+    font-size: 1.3rem;
+  }
+  
+  .App-logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 1rem 0.5rem;
+  }
+  
+  .login-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .App-logo {
+    max-width: 100px;
+  }
+  
+  .login-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .login-button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+  
+  .input-label span {
+    font-size: 0.9rem;
+  }
+  
+  .login-disclaimer {
+    font-size: 0.85rem;
+  }
+}

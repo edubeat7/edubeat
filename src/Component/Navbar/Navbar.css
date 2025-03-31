@@ -1,0 +1,88 @@
+.navbar {
+    background-color: #33333300;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas si es necesario */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+  }
+  
+  .navbar a {
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #d065eb;
+  }
+
+  /* Logo container styles */
+.logo-container1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+   /* background-color: #141414; 
+    background-color: #202020; viejo negro*/
+   /* background-color: #8033af;*/
+    background-color: #f2f2f2;
+    
+    width: flex;
+    justify-content: center;
+  
+  }
+  
+  /* Logo styles */
+  .App-logo1 {
+    height: 50px;
+    width: 50px;
+    
+    
+  }
+  
+  /* Estilos para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .navbar ul {
+      gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+  
+    .navbar a {
+      font-size: 14px; /* Reduce el tamaño de la fuente */
+      padding: 8px; /* Ajusta el padding para una mejor apariencia */
+    }
+
+    
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+     
+    }
+  
+    .navbar ul {
+     /* flex-direction:column;  Cambia la dirección de los elementos a columna */
+      align-items: center; /* Centra los elementos en la columna */
+    }
+  
+    .navbar a {
+      font-size: 12px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+  }

@@ -1,0 +1,606 @@
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.button--whatsapp:hover .whatsapp-icon {
+  transform: scale(1.2);
+}
+
+.container {
+  font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* PaymentStyles.css - Estilos específicos para el componente de pago */
+.header-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #8A2BE2;
+  border-radius: 3px;
+}
+
+.payment-instruction {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.payment-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones */
+.button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.button--primary {
+  background: #4B0082;
+  color: white;
+  width: 100%;
+  padding: 15px 30px;
+}
+
+.button--primary:hover {
+  background: #5a1a9a;
+  transform: translateY(-2px);
+}
+
+.button--payment {
+  background: #4B0082;
+  color: white;
+  width: 100%;
+  padding: 15px 30px;
+}
+
+.button--payment:hover {
+  background: #5a1a9a;
+  transform: translateY(-2px);
+}
+
+.button--verify {
+  background: #4B0082;
+  color: white;
+  padding: 12px 20px;
+  min-width: 120px;
+}
+
+.button--verify:hover {
+  background: #5a1a9a;
+  transform: translateY(-2px);
+}
+
+.button--disabled {
+  background: #666 !important;
+  cursor: not-allowed;
+  transform: none !important;
+  opacity: 0.7;
+}
+
+.button--whatsapp {
+  background: #25D366;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+}
+
+.button--whatsapp:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+.button--large {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+}
+
+/* Caja de verificación */
+.verification-box {
+  background: rgba(75, 0, 130, 0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-left: 4px solid #8A2BE2;
+}
+
+.verification-steps {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+.verification-steps li {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.code-help {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.code-display {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #8A2BE2, #4B0082);
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+  box-shadow: 0 4px 10px rgba(75, 0, 130, 0.3);
+  letter-spacing: 1px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(138, 43, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+  }
+}
+
+.code-type {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Sección de verificación de código */
+.code-verification-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.code-verification-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.code-input-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.code-input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #333;
+}
+
+.code-input:focus {
+  border-color: #8A2BE2;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+.code-tips {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.code-tips ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.code-tips li {
+  margin-bottom: 0.5rem;
+  color: #e6e6e6;
+}
+
+/* Mensajes */
+.transaction-success {
+  background: rgba(40, 167, 69, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #28a745;
+  color: #ffffff;
+}
+
+.error-message {
+  color: #ff6b6b;
+  background: rgba(255, 68, 68, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 4px solid #ff4444;
+  margin-top: 1rem;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #ffffff;
+  background: rgba(75, 0, 130, 0.1);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #8A2BE2;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 1.5rem auto;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Detalles de pago */
+.payment-details {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.payment-details h3 {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #e6e6e6;
+}
+
+.payment-details p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.payment-details .note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  font-style: italic;
+}
+
+.verification-success {
+  text-align: center;
+  background: rgba(40, 167, 69, 0.2);
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  color: #ffffff;
+  animation: fadeIn 0.5s ease-in;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.verification-success:before {
+  content: '✓';
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(40, 167, 69, 0.8);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.verification-success h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Media Queries para tablets */
+@media (max-width: 992px) {
+  .container {
+    padding: 0.75rem;
+  }
+  
+  .payment-content {
+    padding: 1.25rem;
+  }
+}
+
+/* Media Queries para tablets pequeñas y móviles grandes */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .header-title {
+    font-size: 1.75rem;
+  }
+  
+  .header-title:after {
+    width: 60px;
+  }
+  
+  .payment-instruction {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .button--large {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+  
+  .payment-content {
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+  
+  .verification-box {
+    padding: 1.25rem;
+  }
+  
+  .verification-steps {
+    margin-left: 1.25rem;
+  }
+  
+  .code-verification-section h3 {
+    font-size: 1.2rem;
+  }
+  
+  .code-input-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .button--verify {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .verification-success:before {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .verification-success h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media Queries para móviles */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-title:after {
+    width: 50px;
+    height: 2px;
+    bottom: -8px;
+  }
+  
+  .payment-instruction {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  
+  .payment-content {
+    gap: 1.2rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .verification-box {
+    padding: 1rem;
+    border-left-width: 3px;
+  }
+  
+  .verification-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .verification-steps {
+    margin-left: 1rem;
+    margin-top: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .verification-steps li {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .code-help {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+  }
+  
+  .button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .button--large {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+  
+  .code-verification-section {
+    padding: 1rem;
+  }
+  
+  .code-verification-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .code-input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .code-tips {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .code-tips li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .error-message {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .payment-details {
+    padding: 1rem;
+  }
+  
+  .payment-details h3 {
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .payment-details p {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+  }
+  
+  .payment-details .note {
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+  }
+  
+  .verification-success {
+    padding: 1.75rem 1rem;
+  }
+  
+  .verification-success:before {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    top: -20px;
+  }
+  
+  .verification-success h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .loader {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+  
+  .loading-message {
+    padding: 2rem 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .code-display {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Para prevenir el desbordamiento del texto en dispositivos pequeños */
+  .payment-content * {
+    word-break: break-word;
+  }
+}
