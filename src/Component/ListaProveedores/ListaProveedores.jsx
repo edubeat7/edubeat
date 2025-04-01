@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import * as XLSX from 'xlsx';
-import './ListaProveedores.css';
+import './estiloLista.css';
 import Navbar from '../Navbar/Navbar';
 
 const supabase = createClient(
