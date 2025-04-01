@@ -75,7 +75,7 @@ export default function AudioInterface() {
       }
 
       const { data, error } = await supabase.storage
-        .from('Musica')
+        .from('musica')
         .list(currentPath, {
           limit: 100,
           offset: 0,
@@ -96,7 +96,7 @@ export default function AudioInterface() {
         data.map(async (item) => {
           if (item.id === null) {
             const { data: folderContent } = await supabase.storage
-              .from('Musica')
+              .from('musica')
               .list(`${currentPath}/${item.name}`);
             
             if (!folderContent || folderContent.length === 0) return null;
@@ -104,7 +104,7 @@ export default function AudioInterface() {
             return { ...item, isFolder: true, name: item.name };
           } else {
             const { data: urlData } = supabase.storage
-              .from('Musica')
+              .from('musica')
               .getPublicUrl(`${currentPath}/${item.name}`);
 
             const originalName = item.name.split('-').slice(1).join('-') || item.name;

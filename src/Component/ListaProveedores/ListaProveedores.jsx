@@ -368,7 +368,7 @@ export default function ListaProveedores() {
     try {
       // Subir el archivo a Supabase
       const { error } = await supabase.storage
-        .from('proveedores')
+        .from('proveedoresdeposito')
         .upload(file.name, file, {
           cacheControl: '3600',
           upsert: true
@@ -378,7 +378,7 @@ export default function ListaProveedores() {
 
       // Obtener URL pública del archivo
       const { data: urlData } = supabase.storage
-        .from('proveedores')
+        .from('proveedoresdeposito')
         .getPublicUrl(file.name);
 
       if (!urlData || !urlData.publicUrl) {
