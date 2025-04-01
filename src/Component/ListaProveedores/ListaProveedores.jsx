@@ -8,7 +8,7 @@ const supabase = createClient(
   import.meta.env.VITE_APP_SUPABASE_URL,
   import.meta.env.VITE_APP_SUPABASE_ANON_KEY
 );
-
+//hola mundo
 export default function ListaProveedores() {
   const [proveedores, setProveedores] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
